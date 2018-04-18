@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	.one{float: left;width: 130px;height: 325px;border:4px solid #00a0e9;border-radius: 7px;}
+	.one p{text-align: center;font-size: 13px;color: #0ea5ea}
+	.one p a{color: #0ea5ea;text-decoration: none;}
+	.test,.test_one{margin-top: 150px;}
+	.two img{width: 100px;height: 100px;}
+	.three{background: #00a0e9;width: 95px;height: 25px;margin-left: 18px;border-radius: 3px;}
+	.test{width:30px;height:116px;float: left;}
+	.bg1{background:url('images/floatqq/1.png');}
+	.bg2{background:url('images/floatqq/2.png');}
+	.right{float: right;width: 130px;height: 325px;border:4px solid #00a0e9;border-radius: 7px;}
+	.right p{text-align: center;font-size: 13px;color: #0ea5ea}
+	.right input{width: 100px;height: 15px;border: 1px solid #ccc;}
+	.test_one{width:30px;height:116px;float: right;}
+	.bg3{background:url('images/floatqq/3.png');}
+	.bg4{background:url('images/floatqq/4.png');}
+	</style>
+</head>
+<body>
+<div class="one">
+	<p><a href="">咨询电话</a></p><hr>
+
+	<p><a href="">132 8180 6252</a></p><hr>
+	<p><a href="">QQ在线咨询</a></p><hr>
+	<p><a href="">在线咨询</a></p>
+	<p class="two"><img src="images/qrcode.jpg" alt=""></p>
+	<p class="three" ><a href="" style="color: white">在线报名</a></p>
+</div>
+<div class="test"></div>
+
+<div class="right">
+	<p><a href="">在线报名</a></p><hr>
+	<p>你的姓名：<input type="text"></p>
+	<p>联系电话：<input type="text"></p>
+	<p>通信地址: <input type="text"></p>
+	<p>意向专业: <input type="text"></p>
+	<p>其他说明: <input type="text"></p>
+	<p><input type="button" value="提交申请" style="width: 70px;height: 19px;"></p>
+</div>
+<div class="test_one"></div>
+</body>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+	
+	$(function(){
+    $(".test").addClass('bg1'); // 初始化时添加背景1
+    $(".test").click(function() {
+        $(this).toggleClass('bg1').toggleClass('bg2');
+   	    $(".one").toggle();
+    });
+})
+	$(function(){
+    $(".test_one").addClass('bg4'); // 初始化时添加背景1
+    $(".test_one").click(function() {
+        $(this).toggleClass('bg4').toggleClass('bg3');
+   	    $(".right").toggle();
+    });
+})
+</script>
+</html>
